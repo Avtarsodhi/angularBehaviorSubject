@@ -1,0 +1,31 @@
+<div class="row create-to-do">
+    <div class="col-12 center-align heading-text">
+        Enter Task Details
+    </div>
+    <form class="col l12" #createListForm="ngForm">
+        <div class="row">
+            <div class="input-field col l6 create-list-field">
+                <input id="task_name" type="text" class="validate" [(ngModel)]="name"
+                name="name" #taskNameInput>
+                <label for="task_name">Task Name</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l6 create-list-field">
+                <textarea id="task_description" class="materialize-textarea" [(ngModel)]="description" name="description"
+                 #descriptionInput></textarea>
+                <label for="task_description">Task Description</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col l6 create-list-field">
+                <select materialize="material_select" [(ngModel)]="selectedStatus" name="selectedStatus" (change)="changeStatus($event, selectedStatus)">
+                    <option [ngValue]="" disabled selected>Choose your option</option>
+                    <option [ngValue]="1">Yes</option>
+                    <option [ngValue]="2">No</option>
+                </select>
+                <label>Repeating Task</label>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,54 @@
+<div class="row done-list">
+    <div class="col-12 center-align heading-text">
+        Mark the task as not done
+    </div>
+    <!-- <form  class="col l6 column-list left-align" action="#">
+        <div class="checkbox-field">
+            <label>
+                <input type="checkbox" [(ngModel)]="taskChecked" name="taskChecked" (change)="changeCheckboxStatus($event, taskChecked, 'task')"/>
+                <span class="checkbox-label">{{this.taskName}}</span>
+            </label>
+        </div>
+        <div class="checkbox-field">
+            <label>
+                <input type="checkbox" [(ngModel)]="descriptionChecked" name="descriptionChecked" (change)="changeCheckboxStatus($event, taskChecked, 'description')"/>
+                <span class="checkbox-label">{{this.description}}</span>
+            </label>
+        </div>
+        <div class="checkbox-field">
+            <label>
+                <input type="checkbox" [(ngModel)]="statusChecked" name="statusChecked" (change)="changeCheckboxStatus($event, taskChecked, 'status')"/>
+                <span class="checkbox-label">{{this.repeatTask}}</span>
+            </label>
+        </div>
+    </form> -->
+
+    <form action="#" class="col l12 column-list left-align">
+        <table>
+            <thead>
+                <tr>
+                    <th>Select</th>
+                    <th>Task Name</th>
+                    <th>Description</th>
+                    <th>Repeating Task</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <label>
+                            <input type="checkbox" [(ngModel)]="taskChecked" name="taskChecked"
+                                (change)="changeCheckboxStatus($event, taskChecked)" />
+                            <span class="checkbox-label"></span>
+                        </label>
+                    </td>
+                    <td>{{this.taskName}}</td>
+                    <td>{{this.description}}</td>
+                    <td>{{this.repeatTask}}</td>
+                    <td>{{this.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</div>
